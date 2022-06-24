@@ -36,6 +36,15 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button16Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
+    procedure Button7Click(Sender: TObject);
+    procedure Button8Click(Sender: TObject);
+    procedure Button9Click(Sender: TObject);
+    procedure Button10Click(Sender: TObject);
+    procedure Button11Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -53,6 +62,32 @@ implementation
 
 {$R *.fmx}
 
+function passNumber(value : Integer; returnVal: string) : string;
+begin
+
+  if (not enterNewValue) and (currentState = 'Addition') then
+    begin
+      enterNewValue := true;
+      returnVal := '0';
+    end;
+  if returnVal = '0' then
+    returnVal := value.ToString
+  else
+    returnVal := returnVal + value.ToString;
+  displayValue := returnVal.ToInteger();
+  passNumber := returnVal;
+end;
+
+procedure TForm1.Button10Click(Sender: TObject);
+begin
+  Text1.Text := passNumber(1,Text1.text);
+end;
+
+procedure TForm1.Button11Click(Sender: TObject);
+begin
+  Text1.Text := passNumber(0,Text1.text);
+end;
+
 procedure TForm1.Button16Click(Sender: TObject);
 begin
   // + button
@@ -64,6 +99,7 @@ begin
   displayValue := accumulator;
   //showMessage('Clicked and plus worked: ' + accumulator.ToString);
   Text1.Text := accumulator.ToString;
+  enterNewValue := false;
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);
@@ -79,16 +115,46 @@ end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
-  if (not enterNewValue) and (currentState = 'Addition') then
-    enterNewValue := true;
-    Text1.Text := '0';
-  if Text1.Text = '0' then
-    Text1.Text := '7'
-  else
-    Text1.Text := Text1.Text + '7';
-  displayValue := Text1.Text.ToInteger();
+  // Button number7
+  Text1.Text := passNumber(7,Text1.text);
+
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+  Text1.Text := passNumber(8,Text1.text);
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+  Text1.Text := passNumber(9,Text1.text);
+end;
+
+procedure TForm1.Button5Click(Sender: TObject);
+begin
+  Text1.Text := passNumber(6,Text1.text);
+end;
+
+procedure TForm1.Button6Click(Sender: TObject);
+begin
+  Text1.Text := passNumber(5,Text1.text);
+end;
 
 
+
+procedure TForm1.Button7Click(Sender: TObject);
+begin
+  Text1.Text := passNumber(4,Text1.text);
+end;
+
+procedure TForm1.Button8Click(Sender: TObject);
+begin
+  Text1.Text := passNumber(3,Text1.text);
+end;
+
+procedure TForm1.Button9Click(Sender: TObject);
+begin
+  Text1.Text := passNumber(2,Text1.text);
 end;
 
 end.

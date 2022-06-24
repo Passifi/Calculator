@@ -65,6 +65,7 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 16
     Text = '8'
+    OnClick = Button3Click
   end
   object Button4: TButton
     Position.X = 200.000000000000000000
@@ -74,6 +75,7 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 15
     Text = '9'
+    OnClick = Button4Click
   end
   object Button5: TButton
     Position.X = 56.000000000000000000
@@ -83,6 +85,7 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 5
     Text = '6'
+    OnClick = Button5Click
   end
   object Button6: TButton
     Position.X = 128.000000000000000000
@@ -92,6 +95,7 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 4
     Text = '5'
+    OnClick = Button6Click
   end
   object Button7: TButton
     Position.X = 200.000000000000000000
@@ -101,6 +105,7 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 3
     Text = '4'
+    OnClick = Button7Click
   end
   object Button8: TButton
     Position.X = 56.000000000000000000
@@ -110,6 +115,7 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 2
     Text = '3'
+    OnClick = Button8Click
   end
   object Button9: TButton
     Position.X = 128.000000000000000000
@@ -119,6 +125,7 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 1
     Text = '2'
+    OnClick = Button9Click
   end
   object Button10: TButton
     Position.X = 200.000000000000000000
@@ -128,6 +135,7 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 0
     Text = '1'
+    OnClick = Button10Click
   end
   object Button11: TButton
     Position.X = 128.000000000000000000
@@ -137,6 +145,7 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 20
     Text = '0'
+    OnClick = Button11Click
   end
   object Button12: TButton
     Position.X = 272.000000000000000000
