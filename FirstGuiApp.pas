@@ -34,6 +34,8 @@ type
     RoundRect1: TRoundRect;
     GradientAnimation1: TGradientAnimation;
     procedure Button1Click(Sender: TObject);
+    procedure Button16Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,10 +44,27 @@ type
 
 var
   Form1: TForm1;
+  accumulator: Integer = 12;
+  displayValue: Integer = 10;
+  currentState : string = 'Addition';
+  enterNewValue : boolean = false;
 
 implementation
 
 {$R *.fmx}
+
+procedure TForm1.Button16Click(Sender: TObject);
+begin
+  // + button
+  currentState := 'Addition';
+  if accumulator = 0 then
+    accumulator := displayValue
+  else
+    accumulator := displayValue + accumulator;
+  displayValue := accumulator;
+  //showMessage('Clicked and plus worked: ' + accumulator.ToString);
+  Text1.Text := accumulator.ToString;
+end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 var
@@ -54,6 +73,21 @@ var
 begin
   StrMessage := 'Hello, World';
   showMessage (StrMessage);
+
+
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  if (not enterNewValue) and (currentState = 'Addition') then
+    enterNewValue := true;
+    Text1.Text := '0';
+  if Text1.Text = '0' then
+    Text1.Text := '7'
+  else
+    Text1.Text := Text1.Text + '7';
+  displayValue := Text1.Text.ToInteger();
+
 
 end;
 

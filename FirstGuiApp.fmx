@@ -55,6 +55,7 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 17
     Text = '7'
+    OnClick = Button2Click
   end
   object Button3: TButton
     Position.X = 128.000000000000000000
@@ -181,6 +182,7 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 13
     Text = '+'
+    OnClick = Button16Click
   end
   object Button17: TButton
     Position.X = 200.000000000000000000
