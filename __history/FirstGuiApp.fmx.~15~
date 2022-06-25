@@ -2,12 +2,51 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 480
-  ClientWidth = 640
+  ClientHeight = 425
+  ClientWidth = 565
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
+  object RoundRect1: TRoundRect
+    Fill.Color = xFF890909
+    Position.X = -88.000000000000000000
+    Position.Y = -96.000000000000000000
+    Size.Width = 745.000000000000000000
+    Size.Height = 601.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Cap = Round
+    object GradientAnimation1: TGradientAnimation
+      Duration = 0.200000002980232200
+      PropertyName = 'Fill.Gradient'
+      StartValue.Points = <
+        item
+          Color = xFF5B0606
+          Offset = 0.000000000000000000
+        end
+        item
+          Color = claWhite
+          Offset = 1.000000000000000000
+        end>
+      StartValue.StartPosition.X = 0.500000000000000000
+      StartValue.StartPosition.Y = 1.000000000000000000
+      StartValue.StopPosition.X = 0.499999970197677600
+      StartValue.StopPosition.Y = 0.000000000000000000
+      StopValue.Points = <
+        item
+          Color = xFFFEABAB
+          Offset = 0.000000000000000000
+        end
+        item
+          Color = claWhite
+          Offset = 1.000000000000000000
+        end>
+      StopValue.StartPosition.X = 0.500000000000000000
+      StopValue.StartPosition.Y = 1.000000000000000000
+      StopValue.StopPosition.X = 0.499999970197677600
+      StopValue.StopPosition.Y = 0.000000000000000000
+    end
+  end
   object Button2: TButton
     Position.X = 56.000000000000000000
     Position.Y = 112.000000000000000000
@@ -16,6 +55,7 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 17
     Text = '7'
+    OnClick = Button2Click
   end
   object Button3: TButton
     Position.X = 128.000000000000000000
@@ -142,6 +182,7 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 13
     Text = '+'
+    OnClick = Button16Click
   end
   object Button17: TButton
     Position.X = 200.000000000000000000
@@ -187,5 +228,23 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 8
     Text = 'M'
+  end
+  object Rectangle1: TRectangle
+    Fill.Color = claCadetblue
+    Position.X = 56.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 353.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = claBurlywood
+    object Text1: TText
+      Align = FitLeft
+      Size.Width = 353.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Text = '0'
+      TextSettings.Font.Size = 30.000000000000000000
+      TextSettings.HorzAlign = Trailing
+    end
   end
 end

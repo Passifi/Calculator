@@ -28,7 +28,6 @@ type
     Button18: TButton;
     Button19: TButton;
     Button20: TButton;
-    Button21: TButton;
     Text1: TText;
     Rectangle1: TRectangle;
     RoundRect1: TRoundRect;
@@ -36,6 +35,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button16Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button12Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,6 +52,17 @@ var
 implementation
 
 {$R *.fmx}
+
+procedure TForm1.Button12Click(Sender: TObject);
+begin
+  case currentState[1]  of
+    'A' : accumulator := accumulator + displayValue;
+    'S' : accumulator := accumulator - displayValue;
+    'M' : accumulator := accumulator * displayValue;
+    'N' : accumulator := displayValue;
+  end;
+  enterNewValue := true;
+end;
 
 procedure TForm1.Button16Click(Sender: TObject);
 begin
