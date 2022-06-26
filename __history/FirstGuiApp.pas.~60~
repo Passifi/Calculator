@@ -50,8 +50,6 @@ type
     procedure ClearButtonClick(Sender: TObject);
     procedure MultButtonClick(Sender: TObject);
     procedure SignButtonClick(Sender: TObject);
-    procedure DivisionButtonClick(Sender: TObject);
-    procedure floatPointButtonClick(Sender: TObject);
 
   private
     { Private declarations }
@@ -112,17 +110,6 @@ begin
 end;
 
 
-procedure TForm1.DivisionButtonClick(Sender: TObject);
-begin
-
-  currentState := 'Division';
-  accumulator := displayValue;
-  operatorRegister := displayValue;
-  enterNewValue := true;
-
-
-end;
-
 procedure TForm1.EqualSignClick(Sender: TObject);
 begin
   case currentState[1]  of
@@ -137,17 +124,6 @@ begin
   Display.text := displayValue.ToString;
 
 end;
-procedure TForm1.floatPointButtonClick(Sender: TObject);
-var
-  counter : integer;
-begin
-  if Display.text.contains('.') then
-    exit;
-
-
-  Display.text := Display.text + '.';
-end;
-
 procedure TForm1.MultButtonClick(Sender: TObject);
 begin
   currentState := 'Multiply';
@@ -156,7 +132,7 @@ begin
   enterNewValue := true;
 end;
 
-function passNumber(value : extended; returnVal: string) : string;
+function passNumber(value : Integer; returnVal: string) : string;
 begin
 
   if (enterNewValue)  then
@@ -168,7 +144,7 @@ begin
     returnVal := value.ToString
   else
     returnVal := returnVal + value.ToString;
-  displayValue := returnVal.toextended();
+  displayValue := returnVal.ToInteger();
   operatorRegister := displayValue;
   passNumber := returnVal;
 end;
@@ -210,8 +186,7 @@ end;
 
 procedure TForm1.Number7ButtonClick(Sender: TObject);
 begin
-
-
+  // Button number7
   Display.Text := passNumber(7,Display.text);
 
 end;

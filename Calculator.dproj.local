@@ -2,9 +2,9 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2022/06/23 20:21:26.000.441,=C:\Users\Pasca\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2022/06/23 20:23:24.000.131,C:\Users\Pasca\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\Users\Pasca\Documents\Embarcadero\Studio\Projects\FirstGuiApp.fmx</Transaction>
-    <Transaction>2022/06/23 20:23:24.000.131,C:\Users\Pasca\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Pasca\Documents\Embarcadero\Studio\Projects\FirstGuiApp.pas</Transaction>
-    <Transaction>2022/06/23 20:46:07.000.484,C:\Users\Pasca\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Pasca\Documents\Embarcadero\Studio\Projects\Calculator.dproj</Transaction>
+    <Transaction>2022/06/23 20:23:24.000.131,C:\Users\Pasca\Documents\Embarcadero\Studio\Projects\FirstGuiApp.pas=C:\Users\Pasca\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/06/23 20:23:24.000.131,C:\Users\Pasca\Documents\Embarcadero\Studio\Projects\FirstGuiApp.fmx=C:\Users\Pasca\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2022/06/23 20:46:07.000.484,C:\Users\Pasca\Documents\Embarcadero\Studio\Projects\Calculator.dproj=C:\Users\Pasca\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
 		<NoProfile iOSSimulator="iPhone5"/>

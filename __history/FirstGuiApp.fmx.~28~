@@ -47,7 +47,7 @@ object Form1: TForm1
       StopValue.StopPosition.Y = 0.000000000000000000
     end
   end
-  object Button2: TButton
+  object Number7Button: TButton
     Position.X = 56.000000000000000000
     Position.Y = 112.000000000000000000
     Size.Width = 65.000000000000000000
@@ -55,9 +55,9 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 16
     Text = '7'
-    OnClick = Button2Click
+    OnClick = Number7ButtonClick
   end
-  object Button3: TButton
+  object Number8Button: TButton
     Position.X = 128.000000000000000000
     Position.Y = 112.000000000000000000
     Size.Width = 65.000000000000000000
@@ -65,8 +65,9 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 15
     Text = '8'
+    OnClick = Number8ButtonClick
   end
-  object Button4: TButton
+  object Number9Button: TButton
     Position.X = 200.000000000000000000
     Position.Y = 112.000000000000000000
     Size.Width = 65.000000000000000000
@@ -74,8 +75,9 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 14
     Text = '9'
+    OnClick = Number9ButtonClick
   end
-  object Button5: TButton
+  object Number6Button: TButton
     Position.X = 200.000000000000000000
     Position.Y = 184.000000000000000000
     Size.Width = 65.000000000000000000
@@ -83,8 +85,9 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 5
     Text = '6'
+    OnClick = Number6ButtonClick
   end
-  object Button6: TButton
+  object Number5Button: TButton
     Position.X = 128.000000000000000000
     Position.Y = 184.000000000000000000
     Size.Width = 65.000000000000000000
@@ -92,8 +95,9 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 4
     Text = '5'
+    OnClick = Number5ButtonClick
   end
-  object Button7: TButton
+  object Number4Button: TButton
     Position.X = 56.000000000000000000
     Position.Y = 184.000000000000000000
     Size.Width = 65.000000000000000000
@@ -101,8 +105,9 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 3
     Text = '4'
+    OnClick = Number4ButtonClick
   end
-  object Button8: TButton
+  object Number3Button: TButton
     Position.X = 200.000000000000000000
     Position.Y = 256.000000000000000000
     Size.Width = 65.000000000000000000
@@ -110,8 +115,9 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 2
     Text = '3'
+    OnClick = Number3ButtonClick
   end
-  object Button9: TButton
+  object Number2Button: TButton
     Position.X = 128.000000000000000000
     Position.Y = 256.000000000000000000
     Size.Width = 65.000000000000000000
@@ -119,8 +125,9 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 1
     Text = '2'
+    OnClick = Number2ButtonClick
   end
-  object Button10: TButton
+  object Number1Button: TButton
     Position.X = 56.000000000000000000
     Position.Y = 256.000000000000000000
     Size.Width = 65.000000000000000000
@@ -128,8 +135,9 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 0
     Text = '1'
+    OnClick = Number1ButtonClick
   end
-  object Button11: TButton
+  object ZeroButton: TButton
     Position.X = 128.000000000000000000
     Position.Y = 328.000000000000000000
     Size.Width = 65.000000000000000000
@@ -137,8 +145,9 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 19
     Text = '0'
+    OnClick = ZeroButtonClick
   end
-  object Button12: TButton
+  object EqualSign: TButton
     Position.X = 272.000000000000000000
     Position.Y = 328.000000000000000000
     Size.Width = 137.000000000000000000
@@ -146,9 +155,9 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 18
     Text = '='
-    OnClick = Button12Click
+    OnClick = EqualSignClick
   end
-  object Button13: TButton
+  object MultButton: TButton
     Position.X = 344.000000000000000000
     Position.Y = 184.000000000000000000
     Size.Width = 65.000000000000000000
@@ -156,8 +165,9 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 13
     Text = '*'
+    OnClick = MultButtonClick
   end
-  object Button14: TButton
+  object MinusButton: TButton
     Position.X = 272.000000000000000000
     Position.Y = 256.000000000000000000
     Size.Width = 65.000000000000000000
@@ -166,7 +176,7 @@ object Form1: TForm1
     TabOrder = 7
     Text = '-'
   end
-  object Button15: TButton
+  object DivisionButton: TButton
     Position.X = 344.000000000000000000
     Position.Y = 256.000000000000000000
     Size.Width = 65.000000000000000000
@@ -175,7 +185,7 @@ object Form1: TForm1
     TabOrder = 6
     Text = '/'
   end
-  object Button16: TButton
+  object PlusButton: TButton
     Position.X = 272.000000000000000000
     Position.Y = 184.000000000000000000
     Size.Width = 65.000000000000000000
@@ -183,9 +193,9 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 12
     Text = '+'
-    OnClick = Button16Click
+    OnClick = PlusButtonClick
   end
-  object Button17: TButton
+  object floatPointButton: TButton
     Position.X = 200.000000000000000000
     Position.Y = 328.000000000000000000
     Size.Width = 65.000000000000000000
@@ -194,7 +204,7 @@ object Form1: TForm1
     TabOrder = 11
     Text = ','
   end
-  object Button18: TButton
+  object SignButton: TButton
     Position.X = 56.000000000000000000
     Position.Y = 328.000000000000000000
     Size.Width = 65.000000000000000000
@@ -202,8 +212,9 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 10
     Text = '+/-'
+    OnClick = SignButtonClick
   end
-  object Button19: TButton
+  object ClearButton: TButton
     Position.X = 272.000000000000000000
     Position.Y = 112.000000000000000000
     Size.Width = 65.000000000000000000
@@ -211,8 +222,9 @@ object Form1: TForm1
     Size.PlatformDefault = False
     TabOrder = 9
     Text = 'C'
+    OnClick = ClearButtonClick
   end
-  object Button20: TButton
+  object AccumulatorClearButton: TButton
     Position.X = 344.000000000000000000
     Position.Y = 112.000000000000000000
     Size.Width = 65.000000000000000000
@@ -229,7 +241,7 @@ object Form1: TForm1
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
     Stroke.Color = claBurlywood
-    object Text1: TText
+    object Display: TText
       Align = FitLeft
       Size.Width = 353.000000000000000000
       Size.Height = 50.000000000000000000

@@ -28,10 +28,10 @@ type
     SignButton: TButton;
     ClearButton: TButton;
     AccumulatorClearButton: TButton;
+    Display: TText;
     Rectangle1: TRectangle;
     RoundRect1: TRoundRect;
     GradientAnimation1: TGradientAnimation;
-    Display: Ttext;
 
     procedure PlusButtonClick(Sender: TObject);
     procedure Number7ButtonClick(Sender: TObject);
@@ -50,8 +50,6 @@ type
     procedure ClearButtonClick(Sender: TObject);
     procedure MultButtonClick(Sender: TObject);
     procedure SignButtonClick(Sender: TObject);
-    procedure DivisionButtonClick(Sender: TObject);
-    procedure floatPointButtonClick(Sender: TObject);
 
   private
     { Private declarations }
@@ -61,9 +59,9 @@ type
 
 var
   Form1: TForm1;
-  accumulator: Extended = 0;
-  operatorRegister : Extended = 0;
-  displayValue: Extended = 0;
+  accumulator: Integer = 0;
+  operatorRegister : Integer = 0;
+  displayValue: Integer = 0;
   currentState : string = 'Addition';
   enterNewValue : boolean = false;
 
@@ -102,26 +100,6 @@ begin
 
 end;
 
-procedure divide;
-begin
-  if not (operatorRegister = 0) then
-  begin
-    accumulator := accumulator / operatorRegister;
-    displayValue := accumulator;
-  end;
-end;
-
-
-procedure TForm1.DivisionButtonClick(Sender: TObject);
-begin
-
-  currentState := 'Division';
-  accumulator := displayValue;
-  operatorRegister := displayValue;
-  enterNewValue := true;
-
-
-end;
 
 procedure TForm1.EqualSignClick(Sender: TObject);
 begin
@@ -129,7 +107,6 @@ begin
     'A' : addition;
     'S' : subtract;
     'M' : multiply;
-    'D' : divide;
     'N' : accumulator := displayValue;
   end;
   enterNewValue := true;
@@ -137,17 +114,6 @@ begin
   Display.text := displayValue.ToString;
 
 end;
-procedure TForm1.floatPointButtonClick(Sender: TObject);
-var
-  counter : integer;
-begin
-  if Display.text.contains('.') then
-    exit;
-
-
-  Display.text := Display.text + '.';
-end;
-
 procedure TForm1.MultButtonClick(Sender: TObject);
 begin
   currentState := 'Multiply';
@@ -156,7 +122,7 @@ begin
   enterNewValue := true;
 end;
 
-function passNumber(value : extended; returnVal: string) : string;
+function passNumber(value : Integer; returnVal: string) : string;
 begin
 
   if (enterNewValue)  then
@@ -168,7 +134,7 @@ begin
     returnVal := value.ToString
   else
     returnVal := returnVal + value.ToString;
-  displayValue := returnVal.toextended();
+  displayValue := returnVal.ToInteger();
   operatorRegister := displayValue;
   passNumber := returnVal;
 end;
@@ -198,8 +164,8 @@ end;
 
 procedure TForm1.SignButtonClick(Sender: TObject);
 begin
-  displayValue := displayValue * -1;
-  Display.text := displayValue.tostring;
+  {displayValue := displayValue * -1;
+  Display.text := displayValue.tostring;}
 end;
 
 procedure TForm1.ClearButtonClick(Sender: TObject);
@@ -210,8 +176,7 @@ end;
 
 procedure TForm1.Number7ButtonClick(Sender: TObject);
 begin
-
-
+  // Button number7
   Display.Text := passNumber(7,Display.text);
 
 end;

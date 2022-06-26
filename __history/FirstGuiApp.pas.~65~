@@ -210,8 +210,7 @@ end;
 
 procedure TForm1.Number7ButtonClick(Sender: TObject);
 begin
-
-
+  // Button number7
   Display.Text := passNumber(7,Display.text);
 
 end;
